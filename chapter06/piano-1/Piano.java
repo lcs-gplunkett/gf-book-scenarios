@@ -27,7 +27,6 @@ public class Piano extends World
         //start tracking frames
         frames = 0;
 
-        
     }
     /**
      * Act - called repeatedly to create animation
@@ -35,9 +34,11 @@ public class Piano extends World
     public void act()
     {
         //Every second say hello to the next person in the list
-        if (frames % 60 == 0)
+        // Bolean AND
+        //statements in the conditional run ONLY when BOTH conditions are true
+        //Boolean AND = &&
+        if ((frames % 60 == 0) && (frames / 60 < 10))
         {
-            if (frames / 60 < 10)
             {
                 showText("Hello " + studentNames[ frames / 60], 400, 170);
             }
