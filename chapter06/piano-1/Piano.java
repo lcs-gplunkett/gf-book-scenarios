@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, and Greenfoot)
  */
 public class Piano extends World
 {
-    
+
     /**
      * Instance variables (can be used anywhere below)
      */
@@ -23,25 +23,30 @@ public class Piano extends World
     public Piano() 
     {
         super(800, 340, 1);
-        
+
         //start tracking frames
         frames = 0;
-        
-        
-        //initialie the array of names
+
         
     }
-    
     /**
      * Act - called repeatedly to create animation
      */
     public void act()
     {
+        //Every second say hello to the next person in the list
+        if (frames % 60 == 0)
+        {
+            if (frames / 60 < 10)
+            {
+                showText("Hello " + studentNames[ frames / 60], 400, 170);
+            }
+        }
         //keep track of the frames
         frames += 1;
-        
-        
+
         //show current frame
         showText("" + frames, 100, 100);
+
     }
 }
