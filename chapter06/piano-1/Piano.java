@@ -21,7 +21,7 @@ public class Piano extends World
     //Track the white keys and notes
     String[] whiteKeys = {"a", "s", "d", "f", "g", "h", "j", "k", 
                            "l", ";", "'", "\\"};  
-    String[] whiteNotes = {"3c", "3d", "3e", "3f", "3a", "3b", "4c", 
+    String[] whiteNotes = {"3c", "3d", "3e", "3f","3g", "3a", "3b", "4c", 
                             "4d", "4e", "4f", "4g",};
     
     
@@ -48,9 +48,21 @@ public class Piano extends World
         //whiteKeys array
         //whiteKeys.length automatically returns the correct number of values
         //in the array (so that we won't run past the end)
-        if ((frames % 60 == 0) && (frames / 60 < whiteKeys.length))
+        int position = frames / 60;
+        if ((frames % 60 == 0) && (position < whiteKeys.length))
         {
-            //{
+            //Assemble the piano by creating each key one by one
+            Key anotherKey = new Key(whiteKeys[position], whiteNotes[position]);                
+            
+            //This line actually adds the object to the Piano world
+            addObject(anotherKey, 54 + position * 63 , 140);
+            
+            //Only show a messahe when we are in the bounds of the array
+            //showText("Array index is: " + position, 400, 250);
+            
+            
+            
+            //{ 
               //  showText("Hello " + studentNames[ frames / 60], 400, 170);
             //}
         }

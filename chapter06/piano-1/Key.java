@@ -23,7 +23,6 @@ public class Key extends Actor
         isDown = false;
         
         //initialize the key and sound instance variables
-        
         key = keyName;
         sound = soundFile;
     }
@@ -43,7 +42,7 @@ public class Key extends Actor
            isDown = true;
            play();
         }
-        if (isDown == true && Greenfoot.isKeyDown("g") == false)
+        if (isDown == true && Greenfoot.isKeyDown(key) == false)
         {
             setImage("white-key.png");
             isDown = false;
