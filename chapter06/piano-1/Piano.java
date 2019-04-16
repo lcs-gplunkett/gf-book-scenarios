@@ -46,7 +46,9 @@ public class Piano extends World
         //Boolean AND = &&
         //this block of code runs once per seconf until the end of the 
         //whiteKeys array
-        if ((frames % 60 == 0) && (frames / 60 < 12))
+        //whiteKeys.length automatically returns the correct number of values
+        //in the array (so that we won't run past the end)
+        if ((frames % 60 == 0) && (frames / 60 < whiteKeys.length))
         {
             //{
               //  showText("Hello " + studentNames[ frames / 60], 400, 170);
