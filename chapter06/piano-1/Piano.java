@@ -17,6 +17,14 @@ public class Piano extends World
     //Object data type... square brackets[] indicate an array (a list)
     String[] studentNames = {"Sarah", "Chelsea", "Jack", "Maxwell", "Gavin", 
             "Minah", "Brandon", "Jeewoo", "Peter", "Justy"};
+            
+    //Track the white keys and notes
+    String[] whiteKeys = {"a", "s", "d", "f", "g", "h", "j", "k", 
+                           "l", ";", "'", "\\"};  
+    String[] whiteNotes = {"3c", "3d", "3e", "3f", "3a", "3b", "4c", 
+                            "4d", "4e", "4f", "4g",};
+    
+    
     /**
      * Make the piano.
      */
@@ -33,11 +41,12 @@ public class Piano extends World
      */
     public void act()
     {
-        //Every second say hello to the next person in the list
         // Bolean AND
         //statements in the conditional run ONLY when BOTH conditions are true
         //Boolean AND = &&
-        if ((frames % 60 == 0) && (frames / 60 < 10))
+        //this block of code runs once per seconf until the end of the 
+        //whiteKeys array
+        if ((frames % 60 == 0) && (frames / 60 < 12))
         {
             //{
               //  showText("Hello " + studentNames[ frames / 60], 400, 170);
