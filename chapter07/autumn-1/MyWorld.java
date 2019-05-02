@@ -26,7 +26,7 @@ public class MyWorld extends World
         
         //Add 18 leafs to the world
         //START, KEEP GOING AS LONG AS THIS IS TRUE, CHANGE BY
-        for (int i = 1; i <= 18; i =+ 1 )
+        for (int i = 1; i <= 18; i += 1 )
         {
           //Create a leaf
           Leaf aLeaf = new Leaf();
