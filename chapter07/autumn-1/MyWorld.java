@@ -23,5 +23,21 @@ public class MyWorld extends World
     private void setUp()
     {
         addObject(new Block(), 300, 200);
+        
+        //Add 18 leafs to the world
+        //START, KEEP GOING AS LONG AS THIS IS TRUE, CHANGE BY
+        for (int i = 1; i <= 18; i =+ 1 )
+        {
+          //Create a leaf
+          Leaf aLeaf = new Leaf();
+          
+          //get a random location
+          //use Get width instead of number to avoid magic constant
+          int x = Greenfoot.getRandomNumber(getWidth());
+          int y = Greenfoot.getRandomNumber(getHeight());
+          
+          //add the leag object to the world
+          addObject(aLeaf,x, y);
+        }
     }
 }

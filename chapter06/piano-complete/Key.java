@@ -45,7 +45,6 @@ public class Key extends Actor
             isDown = false;
         }
     }
-    
     /**
      * Play the note of this key.
      */
